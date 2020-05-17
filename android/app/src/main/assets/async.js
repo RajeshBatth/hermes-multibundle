@@ -1,0 +1,21 @@
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************\n\n\n\n")
+console.log("Hello from async.js on hermes")
+console.log("**********************************\n\n\n\n")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+console.log("**********************************")
+
+console.log("Printing Date")
+const mod = window.__r(381)
+console.log("Printing Date Done", mod.default() )
+
+console.log('global keys', JSON.stringify(Object.keys(globalThis)))
+
+//throw new Error("Test Crash")

@@ -1,0 +1,22 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "start": "react-native start --port=8080",
+    "bundle-android": "NODE_ENV=production react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle"
+  },
+  "dependencies": {
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "~0.61.5"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.9.0",
+    "babel-jest": "~25.2.6",
+    "jest": "~25.2.6",
+    "react-test-renderer": "~16.9.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "private": true
+}

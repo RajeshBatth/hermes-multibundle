@@ -1,0 +1,17 @@
+{
+  "name": "multibundle",
+  "displayName": "test hermes multi bundle",
+  "expo": {
+    "name": "multibundle",
+    "slug": "expo-template-bare",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
