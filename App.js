@@ -1,24 +1,24 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import printDate from './printCurrentDate'
-
-const instructions = Platform.select({
-  ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
-  android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
-});
-
+import { ActivityIndicator, Platform, StyleSheet, Text, View } from 'react-native';
+import importLazy from "./pages/base";
 
 
 export default function App() {
+  const [Home, setHomeMod] = React.useState(null)
   React.useEffect(() => {
-    console.log('@rajesh printDate', printDate())
+    importLazy("pages/home/index.js").then(module => {
+      setHomeMod(()=>module.default)
+    })
   }, []);
-
+  if (Home == null) {
+    return <View>
+      <ActivityIndicator size={50}/>
+      <Text>Loading chunk</Text>
+    </View>
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome to React Native!</Text>
-      <Text style={styles.instructions}>To get started, edit App.js</Text>
-      <Text style={styles.instructions}>{instructions}</Text>
+      <Home/>
     </View>
   );
 }

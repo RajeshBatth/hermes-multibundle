@@ -19,13 +19,14 @@ public class MainApplication extends Application implements ReactApplication {
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
-            return BuildConfig.DEBUG;
+            return false && BuildConfig.DEBUG;
         }
 
         @Override
         protected List<ReactPackage> getPackages() {
             List<ReactPackage> packages = new ArrayList<>();
             packages.add(new MainReactPackage(getMainPackageConfig()));
+            packages.add(new MyPackage());
             return packages;
         }
 

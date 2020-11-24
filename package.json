@@ -2,7 +2,8 @@
   "main": "index.js",
   "scripts": {
     "start": "react-native start --port=8080",
-    "bundle-android": "NODE_ENV=production react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle"
+    "bundle-home": "NODE_ENV=production react-native bundle --platform android --dev false --entry-file pages/home/index.js --bundle-output /tmp/index.android.bundle --reset-cache",
+    "bundle-android": "NODE_ENV=production react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --reset-cache"
   },
   "dependencies": {
     "react": "~16.9.0",
@@ -13,6 +14,7 @@
     "@babel/core": "~7.9.0",
     "babel-jest": "~25.2.6",
     "jest": "~25.2.6",
+    "line-reader": "^0.4.0",
     "react-test-renderer": "~16.9.0"
   },
   "jest": {
